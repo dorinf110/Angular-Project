@@ -1,0 +1,60 @@
+body{
+    position: relative;
+    display:block;
+    
+ }
+#div_head{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 5dvi;
+    font-size: 20px;
+    align-items: center;
+    background-color: #d6ebf7;
+    border-bottom: 2px solid blue;
+ }
+
+#div_img{
+    background-image: url('../../../assets/images/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width:5%;
+    height: 100%;
+}
+#usr{
+    width:45%;
+    display:flex;
+}
+#user_p{
+    margin-top: 1%;;
+    width: fit-content;
+    top:0%;
+    display:inline-block;
+}
+
+span{
+    color: rgb(82, 71, 233);
+    font-size: 20px ;
+    font-style: italic;
+}
+
+#div_btn_head{
+    height:100%;
+    display:flex;
+    justify-content: space-evenly;
+    width:40%;
+    align-items: center;
+}
+
+ #logout{
+    margin-right: 5%;
+ }
+
+ @media screen and (min-width: 512px) and (max-width: 1399px){
+    button, p, span{
+        font-size:8px;
+      }
+    button{
+        padding: 1%;
+    }
+    }

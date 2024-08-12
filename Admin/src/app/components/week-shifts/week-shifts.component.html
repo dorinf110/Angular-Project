@@ -1,0 +1,48 @@
+<div id="large">
+    <div *ngIf="hasMS" id="workeroTM">
+        The worker of the month is: <span>{{worker}}</span>
+    </div>
+    <div *ngIf="hasWPS" id="table" class="mat-elevation-z3">
+        <h2>This week shifts:</h2>
+        <div width="100%" id="form">
+            <table mat-table [dataSource]="dataSource">
+                <ng-container matColumnDef="username">
+                    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+                    <mat-cell *matCellDef="let shift">{{shift.username}}</mat-cell>
+                </ng-container>
+            <ng-container matColumnDef="date">
+                <mat-header-cell *matHeaderCellDef>Date</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.date | date: "dd/MM/yyyy"}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="startTime">
+                <mat-header-cell *matHeaderCellDef>Start time</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.startTime}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="endTime">
+                <mat-header-cell *matHeaderCellDef>End time</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.endTime}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="wage">
+                <mat-header-cell *matHeaderCellDef>Wage</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.wage | number:"1.0-2"}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="place">
+                <mat-header-cell *matHeaderCellDef>Place</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.place}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="profit">
+                <mat-header-cell *matHeaderCellDef>Profit</mat-header-cell>
+                <mat-cell *matCellDef="let shift">{{shift.profit | number:"1.0-2"}}</mat-cell>
+            </ng-container>
+            
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+           </table>
+        </div>
+     </div>
+    <div *ngIf="hasShifts" id="mostProf">
+        The month with highest earnings is: <span>{{mostProfMonth}}</span>
+    </div>
+ </div>
+    
+    

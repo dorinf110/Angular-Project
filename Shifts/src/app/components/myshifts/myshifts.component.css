@@ -1,0 +1,172 @@
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+
+#table{
+    width:90%;
+    margin-left:23%;
+    margin-top:1%;
+    height: fit-content;
+  }
+
+  #form{
+    background-color: rgb(217, 243, 248);
+  }
+
+/*  */
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+
+#search{
+  width:fit-content;
+  margin:auto;
+  margin-top: 10%;
+  background-color: rgb(217, 243, 248);
+  width:fit-content;
+  border: 2px solid blue;
+  padding: 2%;
+  box-shadow: 2px 2px 3px 3px #737373;
+  text-align: center;
+  border-radius: 5%;
+}  
+
+mat-card-actions{
+  width:100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+#cont_input{
+  margin: auto;
+  background-color: rgb(217, 243, 248);
+  width:fit-content;
+  border: 2px solid blue;
+  /* padding: 2%; */
+  box-shadow: 2px 2px 3px 3px #737373;
+  text-align: center;
+  border-radius: 5%;
+}
+
+#large{
+  padding-top: 1%;
+  /* background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../../../assets/images/back2.png');
+  background-repeat:repeat;
+  background-clip: border-box;
+  background-size:100%; */
+  height:fit-content;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  
+}
+
+/* body{
+  background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../../../assets/images/back2.png');
+  background-repeat:repeat-y;
+  background-clip: border-box;
+  background-size:auto ;
+  height:100%;
+} */
+mat-cell{
+  /* background-color: rgb(217, 243, 248); */
+  background-color: rgb(188, 237, 247);
+}
+
+mat-header-row{
+  background-color: rgb(217, 243, 248);
+}
+
+#cancel{
+  margin: 0 2% 0 2%;
+}
+
+#large p{
+  font-size:6px;
+  float:right;
+}
+
+@media screen and (min-width: 512px) and (max-width: 1399px){
+ #large{
+  display:block;
+  height: fit-content;
+  padding-bottom: 0;
+  } 
+#table{
+  width:fit-content;
+  margin: auto; 
+  height: fit-content;
+  }
+mat-cell{
+  font-size: 9px;
+}
+mat-header-cell{
+  font-size:10px;
+}
+
+button{
+  font-size:9px;
+  padding: 1%;
+}
+
+#search{
+  margin-top:1%;
+  margin-bottom:10%;
+
+}
+
+}
+
+
+@media screen and (max-width: 511px){
+  #div_head, #profitable, th, tr, .lab_hm, span, .inp, .inp_s, fieldset, #byID, #byDate{
+      font-size: 7px;
+  }
+
+  #div_head{
+      height: 7dvi;
+  }
+  #time{
+      left:10%;
+      top:15%;
+  }
+
+  #usr{
+      right:1%;
+      top:15%;
+      width:40%;
+  }
+
+  #div_head h1 {
+      display:none;
+  }
+  
+  .btn{
+      font-size: 6px;
+      padding: 0;
+      box-shadow: none;
+   }
+  
+  #div_btn_head .btn{
+      top: 15%;
+ }
+ #div_head_btn #search{
+  right:50%;
+ }
+ footer p{
+  font-size: 4px;
+ } 
+ .inp_s, .input_s{
+  margin:0;
+  padding:0;
+ }
+ 
+ #div_search, #div_profile, #div_shifts{
+  width:fit-content;
+ }
+ #addShift{
+  margin-top:20%;
+ }
+
+}

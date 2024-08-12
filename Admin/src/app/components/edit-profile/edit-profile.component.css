@@ -1,0 +1,24 @@
+#large{
+    padding-top: 1%;
+    /* background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../../../assets/images/back2.png');
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    background-size:auto ; */
+    height:100%;
+    text-align:center;
+}
+
+#cont_input{
+    margin: auto;
+    background-color: rgb(217, 243, 248);
+    width: 17%;
+    border: 2px solid blue;
+    padding: 1%;
+    box-shadow: 2px 2px 3px 3px #737373;
+    text-align: center;
+    border-radius: 5%;
+}
+
+#update{
+    margin: 0 2% 0 2%;
+}

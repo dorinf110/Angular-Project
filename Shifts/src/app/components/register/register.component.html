@@ -1,0 +1,72 @@
+<div id="large">
+<div id="cont_input">
+    <mat-card-content>
+        <form [formGroup]="registrationForm" (ngSubmit)="OnSubmit()">
+            <mat-form-field>
+                <mat-label>First Name:</mat-label>
+                <input matInput placeholder="FirstName" name="firstName" id="firstName" formControlName="firstName" required>
+                <mat-error *ngIf="firstName.hasError('required')">Firstname is required!</mat-error>
+                <mat-error *ngIf="firstName.hasError('pattern')">Firstname is incorect!</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Last Name:</mat-label>
+                <input matInput placeholder="LastName" name="lastName" id="lastName" formControlName="lastName" required>
+                <mat-error *ngIf="lastName.hasError('required')">Lastname is required!</mat-error>
+                <mat-error *ngIf="lastName.hasError('pattern')">Lastname is incorect!</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Password:</mat-label>
+                <input matInput placeholder="password" name="password" id="password" formControlName="password" required type="password">
+                <mat-error *ngIf="password.hasError('required')">Password is required!</mat-error>
+                <mat-error *ngIf="password.hasError('pattern')">Password is weak!</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Confirm password:</mat-label>
+                <input matInput placeholder="passwordConf" name="passwordConf" id="passwordConf" formControlName="passwordConf" required type="password">
+                <mat-error *ngIf="passwordConf.hasError('required')">Password is required!</mat-error>
+                <mat-error *ngIf="passwordConf.hasError('pattern')">Password is weak!</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                    <input matInput [matDatepicker]="picker1" placeholder="Angular forms" formControlName="birthDate">
+                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                    <mat-datepicker #picker1></mat-datepicker>
+                  
+                <!-- <mat-label>Birth date</mat-label>
+                <input matInput [matDatepicker]="picker" required name="birthDate" id="birthDate" formcontrolName="birthDate">
+                <mat-hint>Date format: MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker> -->
+                <!-- <input matInput placeholder="birthDate" name="birthDate" id="birthDate" formControlName="birthDate" required> -->
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>Username:</mat-label>
+                <input matInput placeholder="username" name="username" id="username" formControlName="username" required>
+                <mat-error *ngIf="username.hasError('required')">Username is required!</mat-error>
+                <mat-error *ngIf="username.hasError('pattern')">Username is too short!</mat-error>
+            </mat-form-field><br>
+            <mat-form-field>
+                <mat-label>E-mail:</mat-label>
+                <input matInput placeholder="email" name="email" id="email" formControlName="email" required>
+                <mat-error *ngIf="email.hasError('required')">E-mail is required!</mat-error>
+                <mat-error *ngIf="email.hasError('email')">E-mail format is incorrect!</mat-error>
+            </mat-form-field><br>
+
+            <mat-card-actions>
+                <button mat-raised-button id="reg_btn" color="primary" type="submit" (click)="register()" [disabled]="registrationForm.invalid">Register</button>
+            </mat-card-actions><br>
+
+            <div *ngIf="showSpinner">
+                <mat-spinner mode="indeterminate" diameter="20"></mat-spinner>
+            </div>
+            <!-- <div *ngIf="showMessage">
+                <h3>You are registered</h3>
+            </div> -->
+        </form>
+    </mat-card-content>
+    <mat-card-content>
+        <mat-card>
+            Already registered? <a [routerLink]="'/login'">Please login!</a>
+        </mat-card>
+    </mat-card-content>
+    </div>
+</div>

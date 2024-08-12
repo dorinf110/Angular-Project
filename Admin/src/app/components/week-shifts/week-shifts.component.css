@@ -1,0 +1,85 @@
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  #workeroTM{
+    margin:auto;
+    font-size: 20px;
+    text-align: center;
+     /* height: 10%; */
+    /* padding: 20%; */
+    width: 100%;
+    height: fit-content;
+    margin-top: 1%;
+    margin-bottom: 2%;
+
+  }
+
+#table{
+    width:60%;
+    margin:auto;
+    margin-top:1%;
+    height:fit-content;
+    text-align: center;
+  }
+
+  #form{
+    background-color: rgb(217, 243, 248);
+  }
+
+/*  */
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+
+  #large{
+    padding-top: 1%;
+    /* background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../../../assets/images/back2.png');
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    background-size:auto ; */
+    height:100%;
+    position:relative;
+  }
+  
+  #mostProf{
+    margin:auto;
+    font-size: 20px;
+    text-align: center;
+     /* height: 10%; */
+    /* padding: 20%; */
+    width: 100%;
+    height: fit-content;
+    margin-top: 2%;
+  }
+  
+  mat-cell{
+    /* background-color: rgb(217, 243, 248); */
+    background-color: rgb(188, 237, 247);
+  }
+  
+  mat-header-row{
+    background-color: rgb(217, 243, 248);
+  }
+ 
+#div_footer{
+  height:1dvi;
+  width:100%;
+  position:relative;
+  font-size: small;
+  bottom:0;
+}
+
+#div_footer p{
+  position:fixed;
+  bottom: 0;
+  right: 0;
+}
+
+span{
+  color: rgb(82, 71, 233);
+  font-size: 20px ;
+  font-style: italic;
+}

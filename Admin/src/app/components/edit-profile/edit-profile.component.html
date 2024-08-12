@@ -1,0 +1,62 @@
+<app-navbar></app-navbar>
+<div id="large">
+    <h2>Edit profile</h2>
+    <div id="cont_input">
+        <mat-card-content>
+            <form [formGroup]="editForm" (ngSubmit)="OnSubmit()">
+                <mat-form-field>
+                    <mat-label>Email:</mat-label>
+                    <input matInput name="email" id="email" formControlName="email" required readonly>
+                    <mat-error *ngIf="email.hasError('required')">Email is required!</mat-error>
+                    <mat-error *ngIf="email.hasError('pattern')">Email is incorect!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Password:</mat-label>
+                    <input matInput name="password" id="password" formControlName="password" required type="password" readonly="">
+                    <mat-error *ngIf="password.hasError('required')">Password is required!</mat-error>
+                    <mat-error *ngIf="password.hasError('pattern')">Password is incorect!</mat-error>
+                </mat-form-field><br>
+                <!-- <mat-form-field>
+                    <mat-label>Password confirmation:</mat-label>
+                    <input matInput name="passwordConf" id="passwordConf" formControlName="passwordConf" required type="password">
+                    <mat-error *ngIf="passwordConf.hasError('required')">Password confirmation is required!</mat-error>
+                    <mat-error *ngIf="passwordConf.hasError('pattern')">Password confirmation is incorect!</mat-error>
+                </mat-form-field><br> -->
+                <mat-form-field>
+                    <mat-label>First Name:</mat-label>
+                    <input matInput name="firstName" id="firstName" formControlName="firstName" required>
+                    <mat-error *ngIf="firstName.hasError('required')">Firstname is required!</mat-error>
+                    <mat-error *ngIf="firstName.hasError('pattern')">Firstname is incorect!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Last Name:</mat-label>
+                    <input matInput placeholder="LastName" name="lastName" id="lastName" formControlName="lastName" required>
+                    <mat-error *ngIf="lastName.hasError('required')">Lastname is required!</mat-error>
+                    <mat-error *ngIf="lastName.hasError('pattern')">Lastname is incorect!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Username:</mat-label>
+                    <input matInput placeholder="Username" name="username" id="username" formControlName="username" required>
+                    <mat-error *ngIf="username.hasError('required')">Username is required!</mat-error>
+                    <mat-error *ngIf="username.hasError('pattern')">Username is incorect!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Birthdate</mat-label>
+                        <input matInput [matDatepicker]="picker1" placeholder="Birth date" formControlName="birthDate">
+                        <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                        <mat-datepicker #picker1></mat-datepicker>
+                </mat-form-field><br>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="filterShifts()">Filter shifts</button>
+                    <button mat-raised-button id="update" color="primary" type="submit" (click)="update()" [disabled]="editForm.invalid">Update</button>
+                    <button mat-raised-button color="primary" (click)="delete()" >Delete</button>
+                </mat-card-actions>
+    
+                <div *ngIf="showSpinner">
+                    <mat-spinner mode="indeterminate" diameter="20"></mat-spinner>
+                </div>
+            </form>
+        </mat-card-content>
+        </div>
+    </div>
+

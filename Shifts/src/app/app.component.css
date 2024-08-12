@@ -1,0 +1,27 @@
+body{
+    padding-top: 15%;
+    background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../assets/images/back2.png');
+    /* background-image: url('../../../assets/images/back2.png'); */
+    background-repeat:repeat-y;
+    background-clip: border-box;
+    background-size:auto ;
+    height:fit-content;
+}
+#div_footer{
+    height:1dvi;
+    width:100%;
+    position:relative;
+    font-size: small;
+    bottom:0;
+  }
+  
+  #div_footer p{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+  }
+  @media screen and (min-width: 500px) and (max-width: 1399px){
+    #div_footer p{
+      font-size: 5px;
+    }
+  }

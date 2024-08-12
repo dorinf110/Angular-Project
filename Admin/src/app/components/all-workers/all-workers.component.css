@@ -1,0 +1,108 @@
+.mat-mdc-row .mat-mdc-cell {
+    border-bottom: 1px solid transparent;
+    border-top: 1px solid transparent;
+    cursor: pointer;
+  }
+
+  
+  #table{
+    width:40%;
+    margin:auto;
+    margin-top:1%;
+    height: fit-content;
+  }
+
+  #form{
+    background-color: rgb(217, 243, 248);
+  }
+
+/*  */
+.mat-mdc-row:hover .mat-mdc-cell {
+    border-color: currentColor;
+  }
+
+  #large{
+    padding-top: 1%;
+    /* background-image:linear-gradient(to bottom, rgba(188, 228, 245, 0.267), rgb(123, 171, 248)),url('../../../assets/images/back2.png');
+    background-repeat:no-repeat;
+    background-clip: border-box;
+    background-size:auto ; */
+    height:fit-content;
+    /* display: grid;
+    grid-template-columns: 1.6fr 1fr; */
+    text-align: center;
+  }
+  
+  mat-cell{
+    /* background-color: rgb(217, 243, 248); */
+    background-color: rgb(188, 237, 247);
+  }
+  
+  mat-header-row{
+    background-color: rgb(217, 243, 248);
+  }
+
+  #search{
+    width:fit-content;
+    margin:auto;
+    margin-top: 10%;
+    background-color: rgb(217, 243, 248);
+    width:fit-content;
+    border: 2px solid blue;
+    padding: 2%;
+    box-shadow: 2px 2px 3px 3px #737373;
+    text-align: center;
+    border-radius: 5%;
+  }  
+
+  #cont_input{
+    margin: auto;
+    background-color: rgb(217, 243, 248);
+    width:fit-content;
+    border: 2px solid blue;
+    /* padding: 2%; */
+    box-shadow: 2px 2px 3px 3px #737373;
+    text-align: center;
+    border-radius: 5%;
+  }
+
+  #cancel{
+    margin: 0 2% 0 2%;
+  }
+
+  mat-card-actions{
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+  }
+ 
+  @media screen and (min-width: 512px) and (max-width: 1399px){
+    #large{
+     display:block;
+     height: fit-content;
+     padding-bottom: 0;
+     } 
+   #table{
+     width:fit-content;
+     margin: auto; 
+     height: fit-content;
+     }
+   mat-cell{
+     font-size: 9px;
+   }
+   mat-header-cell{
+     font-size:10px;
+   }
+   
+   button{
+     font-size:9px;
+     padding: 1%;
+   }
+   
+   #search{
+     margin-top:1%;
+     margin-bottom:10%;
+   
+   }
+   
+   }

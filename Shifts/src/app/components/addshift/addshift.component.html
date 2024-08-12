@@ -1,0 +1,56 @@
+<app-navbar></app-navbar>
+<div id="large">
+    <div id="cont_input">
+        <mat-card-content>
+            <form [formGroup]="addShiftForm" (ngSubmit)="OnSubmit()">
+                <mat-form-field>
+                    <mat-label>Date:</mat-label>
+                    <input matInput placeholder="date" name="date" id="date" formControlName="date" type="date" required>
+                    <mat-error *ngIf="date.hasError('required')">Date is required!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Start time:</mat-label>
+                    <input matInput placeholder="sTime" name="sTime" id="sTime" formControlName="sTime" type="time" required>
+                    <mat-error *ngIf="sTime.hasError('required')">Start time is required!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>End time:</mat-label>
+                    <input matInput placeholder="eTime" name="eTime" id="eTime" formControlName="eTime" type="time" required>
+                    <mat-error *ngIf="eTime.hasError('required')">End time is required!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Hourly wage:</mat-label>
+                    <input matInput [value]=100 name="wage" id="wage" formControlName="wage" type="number" required>
+                    <mat-error *ngIf="wage.hasError('required')">Wage is required!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Place:</mat-label>
+                    <select matNativeControl formControlName="place" name="place" id="place">
+                      <option value="Lake">Lake</option>
+                      <option value="Park">Park</option>
+                      <option value="Downtown">Downtown</option>
+                    </select>
+                    <mat-error *ngIf="place.hasError('required')">Place is required!</mat-error>
+                  </mat-form-field><br>
+                  <mat-form-field>
+                    <mat-label>Shift name:</mat-label>
+                    <input matInput placeholder="name" name="name" id="name" formControlName="name" type="text" required>
+                    <mat-error *ngIf="name.hasError('required')">Shift name is required!</mat-error>
+                </mat-form-field><br>
+                <mat-form-field>
+                    <mat-label>Comments</mat-label>
+                    <textarea matInput name="comments" id="comments" formControlName="comments" placeholder="comments"></textarea>
+                  </mat-form-field>
+                <mat-card-actions>
+                    <button mat-raised-button id="reg_btn" color="primary" type="submit" (click)="addShift()" [disabled]="addShiftForm.invalid">Add shift</button>
+                    <button mat-raised-button id="reg_btn" color="primary" type="cancel" routerLink="/home" >Cancel</button>
+                </mat-card-actions><br>
+    
+                <div *ngIf="showSpinner">
+                    <mat-spinner mode="indeterminate" diameter="20"></mat-spinner>
+                </div>
+                
+            </form>
+        </mat-card-content>
+        </div>
+    </div>

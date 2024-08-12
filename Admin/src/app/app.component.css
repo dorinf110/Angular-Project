@@ -1,0 +1,18 @@
+#div_footer{
+    height:1dvi;
+    width:100%;
+    position:relative;
+    font-size: small;
+    bottom:0;
+  }
+  
+  #div_footer p{
+    position:fixed;
+    bottom: 0;
+    right: 0;
+  }
+  @media screen and (min-width: 500px) and (max-width: 1399px){
+    #div_footer p{
+      font-size: 5px;
+    }
+  }

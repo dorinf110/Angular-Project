@@ -1,0 +1,22 @@
+.error.mat-snack-bar-container{
+    background: red ;
+    color: white;
+}
+
+.success mat-snack-bar-container{
+    background: #00cc00;
+    color: white;
+}
+
+.warning.mat-snack-bar-container{
+    background: blue ;
+    color: white;
+}
+
+.content-style{
+    border: 1px solid white;
+    border-radius: 4px;
+    padding: 5px;
+    margin-top:5px;
+    margin-bottom:5px;
+}
